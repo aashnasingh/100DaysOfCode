@@ -5,16 +5,15 @@ import java.util.Arrays;
 public class InsertionSortImpl {
 	
 	public static int[] insertionSortArray(int[] inputArr) {
-		
+
 		for (int i = 0; i < inputArr.length; i++) {
 			int current = inputArr[i];
-			int j = i-1;
-			
+			int j = i - 1;
 			while (j >= 0 && inputArr[j] > current) {
-				inputArr[j+1] = inputArr[j];
+				inputArr[j + 1] = inputArr[j];
 				j--;
 			}
-			inputArr[j+1] = current;
+			inputArr[j + 1] = current;
 		}
 		
 		return inputArr;
