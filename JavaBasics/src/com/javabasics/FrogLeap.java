@@ -32,11 +32,30 @@ public class FrogLeap {
 		
 		return ans;
 	}
+	
+	public int frogLeapLoop(int num) {
+		
+		if (num == 2 || num == 1) {
+			return num;
+		}
+		int[] waysArr = new int[num + 1];
+		
+		waysArr[1] = 1;
+        waysArr[2] = 2;
+		
+		for (int i = 3; i <= num; i++) {
+			waysArr[i] = waysArr[i-1] + waysArr[i-2];
+		}
+		
+		return waysArr[num];
+	}
 
 	public static void main(String[] args) {
 		
 		FrogLeap frogLeap = new FrogLeap();
 		int ans = frogLeap.frogLeapRec(7);
+		int ways = frogLeap.frogLeapLoop(7);
+		System.out.println(ways);
 		System.out.println(ans);
 	}
 

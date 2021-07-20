@@ -16,7 +16,7 @@ public class FibonnaciSeq {
 	public static void main(String[] args) {
 		
 		FibonnaciSeq fibonnaciSeq = new FibonnaciSeq();
-		int num = fibonnaciSeq.fibonnaciRec(5);
+		int num = fibonnaciSeq.fibonnaciRec(50);
 		System.out.println(num);
 	}
 
