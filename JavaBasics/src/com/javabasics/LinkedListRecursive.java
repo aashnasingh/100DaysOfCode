@@ -148,11 +148,9 @@ public class LinkedListRecursive {
 		NodeRd next = current.getNext();
 		current.setNext(prev);
 		prev = current;
-		current = next;
+		current = next; 
 		
-		reverseRec(current, prev);
-		
-		return prev;
+		return reverseRec(current, prev);
 	}
 
 	public void printByHead(NodeRd head) {
@@ -169,8 +167,8 @@ public class LinkedListRecursive {
 		}
 		
 		System.out.println("Element at index " + index + " : " + current.getData());
-		current = current.getNext();
-		index++;
+		printByHeadRec(current.getNext(), ++index);
+		
 		
 	}
 
