@@ -260,14 +260,45 @@ public class LinkedListRevisited {
 		
 		addOneRec(current.getNext(), current, ++index);
 	}
+	
+	
+    public NodeRd swapPairs(NodeRd A) {
+
+        if (A == null) return A;
+        NodeRd prev = null;
+        NodeRd current = A;
+        boolean flag = false;
+        while(current != null) {
+            if (flag) {
+                prev.next = current.next;
+                current.next = prev;
+                
+            }
+            else {
+            	prev = current;
+                current = current.next;
+            }
+ 
+            flag = !flag;
+        }
+        char a = 'a';
+
+        return A;
+        
+        
+    }
+	
+
 
 	public static void main(String[] args) {
 		LinkedListRevisited llr = new LinkedListRevisited();
 		llr.append(1);
-		llr.append(9);
-		llr.append(9);
-		llr.append(9);
-		llr.addOne(llr.head);
+		llr.append(2);
+		llr.append(3);
+		llr.append(4);
+		NodeRd newHead =llr.swapPairs(llr.head);
+//		NodeRd newHead = llr.reverseLL(llr.head);
+//		llr.addOne(llr.head);
 //		llr.insert(3);
 //		llr.deleteValSecMethod(llr.head, 3);
 //		llr.insert("Start");
@@ -281,15 +312,15 @@ public class LinkedListRevisited {
 //		llr.append("End");
 //		llr.insertAtIndex(4, 2);
 //		llr.deleteVal(llr.head, "End");
-		llr.printAll();	
-		int sum = llr.add();
-		System.out.println("Sum is : " + sum);
-		boolean contains = llr.contains("Start");
-		System.out.println("Is Start present in the Linked List : " + contains);
-		NodeRd newHead = llr.reverseLL(llr.head);
-		llr.removeDuplicates(newHead);
-		llr.printByHead(newHead);	
-		llr.retainMdeleteN(newHead, 2, 2);
+//		llr.printAll();	
+//		int sum = llr.add();
+//		System.out.println("Sum is : " + sum);
+//		boolean contains = llr.contains("Start");
+//		System.out.println("Is Start present in the Linked List : " + contains);
+//		NodeRd newHead = llr.reverseLL(llr.head);
+//		llr.removeDuplicates(newHead);
+//		llr.printByHead(newHead);	
+//		llr.retainMdeleteN(newHead, 2, 2);
 		llr.printByHead(newHead);
 	}
 	

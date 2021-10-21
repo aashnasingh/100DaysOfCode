@@ -171,6 +171,18 @@ public class LinkedListRecursive {
 		
 		
 	}
+	
+	private NodeRd addOne(NodeRd head) {
+		
+		int carry = calculateCarryRec(head);
+		
+		return head;
+	}
+
+	private int calculateCarryRec(NodeRd head2) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 	public static void main(String[] args) {
 		LinkedListRecursive linkedListRecursive = new LinkedListRecursive();
