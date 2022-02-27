@@ -1,8 +1,7 @@
-package com.javabasics.arrays.slidingwindow;
+package com.javabasics.arrays;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * @author aashnasingh
@@ -13,15 +12,15 @@ import java.util.Scanner;
  * Output : [2, 3, 4]
  *
  */
-public class AverageConiguousSubArray {
+public class AverageContiguousSubArray {
 	
 	private List<Integer> getSubArrayAverage(int[] arr, int k) {
 		
-		List<Integer> averageList = new ArrayList<>();								
+		List<Integer> averageList = new ArrayList<>();
 		int sum = 0;
 		int counter = k;
 		
-		for (int i = 0; i < arr.length + 1 - k; i++) {
+		for (int i = 0; i < arr.length + 1- k; i++) {
 			int j = i;
 			while (counter-- != 0) {
 				sum = sum + arr[j++];
@@ -38,7 +37,7 @@ public class AverageConiguousSubArray {
 
 	public static void main(String[] args) {
 		
-		AverageConiguousSubArray averageConiguousSubArray = new AverageConiguousSubArray();
+		AverageContiguousSubArray averageConiguousSubArray = new AverageContiguousSubArray();
 //		Scanner sc = new Scanner(System.in);
 //		System.out.println("Enter value of k : ");
 //		int k = sc.nextInt();
